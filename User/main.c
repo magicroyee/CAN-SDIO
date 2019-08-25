@@ -2,6 +2,7 @@
 #include "sdio.h"
 #include "usart.h"
 #include "ff.h"
+#include "bsp_can.h"
 
 FATFS fs;													/* FatFs文件系统对象 */
 FIL fnew;													/* 文件对象 */
@@ -16,7 +17,8 @@ int main(void)
 	// 来到这里的时候，系统的时钟已经被配置成72M。
 	
 	/* 初始化调试串口，一般为串口1 */
-	USART1_Init(115200);	
+	USART1_Init(115200);
+	CAN_Config();
 	printf("\r\n****** 这是一个SD卡 文件系统实验 ******\r\n");
 	
 	//在外部SD卡挂载文件系统，文件系统挂载时会对SDIO设备初始化

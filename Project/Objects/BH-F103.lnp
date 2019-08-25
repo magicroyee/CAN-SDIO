@@ -31,6 +31,7 @@
 ".\objects\systick.o"
 ".\objects\usart.o"
 ".\objects\sdio.o"
+".\objects\bsp_can.o"
 ".\objects\diskio.o"
 ".\objects\ff.o"
 ".\objects\cc936.o"
